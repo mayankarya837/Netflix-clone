@@ -73,7 +73,6 @@ pipeline{
                         withKubeConfig(caCertificate: '', clusterName: '', contextName: '', credentialsId: 'ks8', namespace: '', restrictKubeConfigAccess: false, serverUrl: '') {
                                 sh 'kubectl apply -f deployment.yml'
                                 sh 'kubectl apply -f service.yml'
-                                sh 'kubectl set image deployments/netflix-app netflix-app=mayankaryta837/netflix:${env.BUILD_ID}'
                         }        
                     }
                 }
