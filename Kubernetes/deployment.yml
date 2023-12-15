@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: netflix-app
-        image: mayankaryta837/netflix:${env.BUILD_ID}
+        image: mayankaryta837/netflix:latest
         ports:
         - containerPort: 80
